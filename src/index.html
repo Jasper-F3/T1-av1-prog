@@ -10,7 +10,7 @@
   </head>
   <body>
     <div
-      class="h-screen w-screen grid grid-cols-3 grid-rows-4 bg-gray-700 text-white"
+      class="h-screen w-screen grid grid-cols-3 grid-rows-4 bg-primary text-white"
     >
       <div class="card col-span-full">
         <header class="h-full w-full flex flex-col items-center justify-center">
@@ -21,39 +21,104 @@
 
       <div class="main col-span-full row-span-2 h-full-w-full mt-3">
         <section class="flex flex-col items-center justify-center">
-          <h2 class="text-center p-2 text-sm">
+          <h2 class="text-center text-sm">
             Explore o universo de HTML e CSS e crie páginas incríveis com nossa
             documentação.<br />
             Selecione a documentação abaixo
           </h2>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="border-2 border-white rounded-md h-10 w-10 my-5"
+          <div
+            class="h-12 w-12 border-2 border-white rounded-md my-7 opacity-75 flex items-end justify-center"
           >
-            <path
-              fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd"
-            />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="h-9 w-9 animate-bounce"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
         </section>
 
         <section class="flex items-center justify-center w-full">
           <button
-            class="m-1 p-1 border-2 border-green-500 w-20 rounded-md cursor-pointer"
+            class="m-1 p-1 border-2 border-html w-20 rounded-md cursor-pointer"
           >
             <a href="">HTML</a>
           </button>
           <button
-            class="m-1 p-1 border-2 border-green-500 w-20 rounded-md cursor-pointer"
+            class="m-1 p-1 border-2 border-css w-20 rounded-md cursor-pointer"
           >
             <a href="">CSS</a>
           </button>
         </section>
       </div>
+
+      <footer class="col-span-full flex items-end">
+        <ul
+          class="w-full bg-gradient-to-b from-primary to-secundary flex justify-around items-center h-10"
+        >
+          <li>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   </body>
 </html>
