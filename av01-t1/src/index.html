@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Projeto</title>
+  </head>
+  <body>
+    <div
+      class="h-screen w-screen container grid grid-cols-3 grid-rows-3 bg-gray-700 text-white"
+    >
+      <div class="card col-span-full">
+        <header class="h-full w-full flex flex-col items-center justify-center">
+          <h1 class="font-bold text-2xl">SelectTags</h1>
+          <p class="text-xs">O guia de HTML e CSS</p>
+        </header>
+      </div>
+
+      <div class="main col-span-full row-span-2 h-full-w-full">
+        <section class="flex items-center justify-center">
+          <h2 class="text-center p-2 text-sm">
+            Explore o universo de HTML e CSS e crie páginas incríveis com nossa
+            documentação completa.<br />
+            Selecione a documentação abaixo
+          </h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-10 h-10 text-red-500"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </section>
+
+        <section class="flex items-center justify-center mt-10">
+          <button class="m-1 p-1 border-2 border-green-500 w-20 rounded-md">
+            HTML
+          </button>
+          <button class="m-1 p-1 border-2 border-green-500 w-20 rounded-md">
+            CSS
+          </button>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
