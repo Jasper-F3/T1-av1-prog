@@ -10,7 +10,7 @@
   </head>
   <body>
     <div
-      class="h-screen w-screen container grid grid-cols-3 grid-rows-4 bg-gray-700 text-white"
+      class="h-screen w-screen grid grid-cols-3 grid-rows-4 bg-gray-700 text-white"
     >
       <div class="card col-span-full">
         <header class="h-full w-full flex flex-col items-center justify-center">
@@ -26,11 +26,12 @@
             documentação.<br />
             Selecione a documentação abaixo
           </h2>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            class="w-10 h-10 border-2 border-white m-3 p-1 rounded-md hover:border-separate"
+            class="border-2 border-white rounded-md h-10 w-10 my-5"
           >
             <path
               fill-rule="evenodd"
@@ -40,12 +41,16 @@
           </svg>
         </section>
 
-        <section class="flex items-center justify-center mt-5 w-full">
-          <button class="m-1 p-1 border-2 border-green-500 w-20 rounded-md">
-            HTML
+        <section class="flex items-center justify-center w-full">
+          <button
+            class="m-1 p-1 border-2 border-green-500 w-20 rounded-md cursor-pointer"
+          >
+            <a href="">HTML</a>
           </button>
-          <button class="m-1 p-1 border-2 border-green-500 w-20 rounded-md">
-            CSS
+          <button
+            class="m-1 p-1 border-2 border-green-500 w-20 rounded-md cursor-pointer"
+          >
+            <a href="">CSS</a>
           </button>
         </section>
       </div>
