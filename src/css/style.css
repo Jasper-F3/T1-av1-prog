@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+#logo-container img{
+  width: 60px;
+}
+
+.container row left img{
+  width: 100px;
+}
+
+.responsive-img img{
+  width: 200px;
+  
+}
+
+
+  
