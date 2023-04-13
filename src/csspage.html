@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./csspage.css" />
     
-    <title>Document</title>
+    <title>CSS Basics</title>
   </head>
   <body>
     <nav class="navbar">
@@ -65,18 +65,18 @@
                 ></path>
               </g>
             </svg>
-            <span class="link-text" >Cats</span>
+            <span class="link-text" >Lista</span>
 
           </a>
         </li>
         <nav class="catnavbar">
             <ul class="navcontent" >
             <li class="navitems"><a href="seletores">Seletores Básicos</a></li>
-            <li class="navitems"><a href="">Pseudo-classes</a></li>
-            <li class="navitems"><a href="">Pseudo-elementos</a></li>
-            <li class="navitems"><a href="">Display Flex</a></li>
-            <li class="navitems"><a href="">Display Grid</a></li>
-            <li class="navitems"><a href="">Media Queries</a></li>
+            <li class="navitems"><a href="pseudo">Pseudo-classes</a></li>
+            <li class="navitems"><a href="elementos">Pseudo-elementos</a></li>
+            <li class="navitems"><a href="flex">Display Flex</a></li>
+            <li class="navitems"><a href="grid">Display Grid</a></li>
+            <li class="navitems"><a href="media">Media Queries</a></li>
           </ul>
         </nav>
 
@@ -105,7 +105,7 @@
                 ></path>
               </g>
             </svg>
-            <span class="link-text">Aliens</span>
+            <span class="link-text">CSS</span>
           </a>
         </li>
 
@@ -134,7 +134,7 @@
                 ></path>
               </g>
             </svg>
-            <span class="link-text">Space</span>
+            <span class="link-text">HTML</span>
           </a>
         </li>
 
@@ -163,13 +163,13 @@
                 ></path>
               </g>
             </svg>
-            <span class="link-text">Shuttle</span>
+            <span class="link-text">Menu</span>
           </a>
         </li>
       </ul>
     </nav>
     <main>
-      <h1>Seletores Básicos do CSS</h1>
+      <h1 id="seletores">Seletores Básicos do CSS</h1>
 
       <p>
         Falaremos sobre seletores básicos do CSS, onde iremos discutir uma
@@ -256,7 +256,232 @@
       <p>
         Já com o seletor de tag, ocorrerá modificações em todos os elementos em que aquela tag está atribuída, com a exceção de que se restrinja o caminho da tag.
       </p>
-      
+
+      <h1 id="pseudo">Pseudo-classes</h1>
+     <p>Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores
+      que especifica um estado especial do elemento selecionado.
+      Por exemplo, :hover pode ser usado para alterar a cor de um botão quando
+      o usuário passar o cursor sobre ele.</p> 
+
+      <div class="codebox">
+        <xmp>/*Qualquer botão sobre o qual o ponteiro do usuário esteja passando sobre*/
+
+          button:hover {
+            color: blue;
+          }
+           </xmp>
+      </div>
+      <p>Pseudo-classes permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos como o histórico de navegação (:visited, por exemplo), o status do seu conteúdo (como :checked em certos elementos de um formulário), ou a posição do mouse (como :hover, que permite saber se o mouse está sobre um elemento ou não).</p>
+
+      <h2>Sintaxe</h2>
+      <div class="codebox">
+        <xmp>seletor:pseudo-classe {
+          propriedade: valor;
+        }
+           </xmp>
+      </div>
+      <p>Assim como nas classes regulares, você pode encadear juntas quantas pseudo-classes você desejar em um seletor. </p>
+      <h1 id="elementos">Pseudo-elementos</h1>
+      <p>Um pseudo-elemento CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma parte específica do elemento selecionado. Por exemplo, o pseudo-elemento ::first-line aplica o estilo apenas na primeira linha de um parágrafo.</p>
+      <div class="codebox">
+        <xmp>/* A primeira linha de todo elemento p. */
+          p::first-line {
+            color: blue;
+            text-transform: uppercase;
+          }
+           </xmp>
+      </div>
+      <h2>Sintaxe</h2>
+      <div class="codebox">
+        <xmp>seletor::pseudo-elemento {
+          propriedade: valor;
+        }
+           </xmp>
+      </div>
+      <p>Você pode utilizar apenas um pseudo-elemento em um seletor. Ele deve aparecer depois da declaração de um elemento simples.</p>
+      <h1 id="flex">Conceitos básicos de flexbox</h1>
+      <p>O Flexible Box Module, geralmente chamado de flexbox, foi projetado tanto como um modelo de layout unidimensional quanto como um método capaz de organizar espacialmente os elementos em uma interface, além de possuir capacidades avançadas de alinhamento. Este artigo fornece um resumo das principais funcionalidades do flexbox, as quais exploraremos com mais detalhes no restante deste guia.
+
+      </p>
+      <p>Quando se descreve o flexbox como sendo unidimensional, enfatiza-se o fato de que ele lida com o layout em uma dimensão de cada vez - seja uma linha ou uma coluna. Isto pode ser comparado com o modelo bidimensional de CSS - Layout de Grade, que permite o controle simultâneo das colunas e linhas.</p>
+
+      <h2>Os eixos do flexbox</h2>
+      <p>Ao se utilizar o flexbox, é preciso ter em mente que todas as operações realizadas relacionam-se a dois eixos: o eixo principal e o eixo transversal. O eixo principal é definido através da propriedade flex-direction e o eixo transversal encontra-se na direção perpendicular a ele. Como esses eixos são as engrenagens fundamentais do flexbox é necessário compreender minuciosamente o seu funcionamento.</p>
+
+      <h2>Eixo principal</h2>
+      <p>Conforme descrito acima, a propriedade flex-direction define a direção do eixo principal e pode tem quatro valores possíveis:</p>
+
+      <ul>
+        <li>row</li>
+        <li> row-reverse</li>
+        <li>column</li>
+        <li>column-reverse</li>
+      </ul>
+      <p>Se o valor escolhido for row (linha) ou row-reverse (linha reversa), seu eixo principal se moverá ao longo da linha — na direção inline.</p>
+
+      <h2>Contêiner Flex</h2>
+      <p>A área de um documento que faz uso do flexbox é chamada de contêiner flex. Para criar essa estrutura, define-se o valor da propriedade display do elemento representado pelo contêiner como flex ou inline-flex. Desse modo, os elementos-filhos desse contêiner tornar-se-ão do tipo flex. Como todas as propriedades no CSS possuem valores padrão, ao criar um contêiner flex, os elementos nele contidos apresentarão o seguinte comportamento:</p>
+      <ul>
+        <li>Exibição em linha (o padrão do flex-direction é row)</li>
+        <li>Alinhamento na borda inicial do eixo principal.</li>
+        <li>Não há expansão no eixo principal, mas pode haver contração.</li>
+        <li>Haverá expansão vertical para preencher a altura do eixo transversal.</li>
+        <li>A propriedade flex-basis (en-US) estará definida como auto.</li>
+        <li>A propriedade flex-wrap estará definida como nowrap.</li>
+      </ul>
+      <h2>Propriedade flex-direction</h2>
+      <p>A propriedade flex-direction permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal. Definindo a propriedade flex-direction como row-reverse (linha reversa) ainda teremos os elementos dispostos em uma linha, entretanto, as linhas inicial e final serão trocadas.</p>
+      <p>Se mudarmos a flex-direction para a column (coluna), o eixo principal exibirá os elemento em uma coluna. Trocando o valor para column-reverse (coluna reversa) fará com que as linhas inicial e final sejam novamente trocadas.</p>
+
+      <h2>Quebra de linha com "flex-wrap"</h2>
+      <p>Embora o flexbox seja um modelo unidimensional, é possível fazer com que elementos flex sejam agrupados em múltiplas linhas. Ao fazer isso, considera-se cada linha como um novo contêiner flex. Qualquer distribuição espacial ocorrerá ao longo essa linha, sem referência às linhas de ambos os lados. Para gerar a quebra automática das linhas adicione a propriedade flex-wrap com o valor wrap. Assim, se elementos forem muito grandes para serem exibidos em uma única linha, eles serão agrupados em outras linhas.</p>
+
+      <h2>Propriedade abreviada flex-flow</h2>
+      <p>Pode-se combinar as propriedades flex-direction e flex-wrap de forma abreviada através da propriedade flex-flow. O primeiro valor especificado é o flex-direction e o segundo valor é o flex-wrap.</p>
+
+      <h2>Alinhamento, justificação e distribuição de espaço livre entre os elementos</h2>
+
+      <h2>Propriedade align-items</h2>
+      <p>A propriedade align-items irá alinhar os elementos no eixo transversal.
+
+      </p>
+      <p>O valor inicial desta propriedade é stretch e é por essa razão que, por padrão, os elementos flex se estendem até a maior altura. De fato, eles se esticam para preencher o contêiner flex - o item mais alto define a altura deste.</p>
+
+      <p>Pode-se definir a propriedade align-items como flex-start, de modo que os elementos fiquem alinhados com topo do contêiner, flex-end para alinhá-los a partir da base ou center, para que o alinhamento seja centralizado.</p>
+
+      <p>Teste essa propriedade e seus possíveis valores no exemplo prático abaixo — colocou-se uma determinada altura no contêiner flex, de modo que se perceba como os elementos podem ser movidos no interior do mesmo. Veja o que acontece ao definir cada um dos possíveis valores da propriedade align-items:</p>
+
+      <ul>
+        <li>stretch
+        </li>
+        <li>flex-start
+        </li>
+        <li>center
+        </li>
+        <li>flex-end
+        </li>
+      </ul>
+
+      <h2>Propriedade justify-content</h2>
+      <p>A propriedade justify-content (en-US) é empregada para alinhar os elementos ao longo do eixo principal, cuja direção (row ou column) é definida a partir da propriedade flex-direction. O valor inicial é flex-start, que alinha os elementos rente à borda esquerda do contêiner, mas também pode ser definido como flex-end, que resulta em um alinhamento oposto, rente à borda direita do contêiner, ou center, para alinhá-los ao centro.</p>
+      <p>O valor space-between pode ser usado pode ser usado para ocupar todo o espaço livre após a disposição dos itens e dividí-lo igualmente entre os itens, para que haja a mesma quantidade de espaço entre cada elemento. Para gerar uma quantidade igual de espaço à direita e à esquerda, usa-se o valor space-around.</p>
+      <p>Tente os seguintes valores da propriedada justify-content no exemplo prático abaixo:</p>
+      <ul>
+        <li>stretch
+        </li>
+        <li>flex-start
+        </li>
+        <li>flex-end
+        </li>
+        <li>space-around
+        </li>
+        <li>center
+        </li>
+        <li>space-between
+        </li>
+      </ul>
+      <h1 id="grid">Conceitos básicos de Grid Layout
+      </h1>
+      <p>
+        CSS Grid Layout introduz um sistema bi-dimensional de grid (literalmente "grades") para CSS. Grids podem ser usados para o design de layouts de grandes seções de uma webpage, assim como de pequenos elementos de interface. Esse artigo apresenta o CSS Grid Layout e a terminologia que é parte da especificação CSS Grid Layout Level 1. As funcionalidades demonstradas neste resumo serão posteriormente explicadas em maiores detalhes nas demais seções desse guia.
+      </p>
+      <h2>O que é grid?</h2>
+      <p>Grid é uma malha formada pela interseção de um conjunto de linhas horizontais e um conjunto de linhas verticais – um dos conjuntos define colunas e outro linhas. Dentro de um grid, respeitando-se a configuração criada pelas suas linhas, pode-se inserir elementos da marcação.</p>
+<h2>Grid container</h2>
+      <p>Cria-se um grid container com as declarações CSS display: grid ou display: inline-grid para um elemento da marcação. Assim declarando, todos os elementos filhos diretos daquele container se transformam em grid items.
+
+</p>
+<p>        No exemplo mostrado a seguir um elemento div container ao qual foi atribuída a classe wrapper contém cinco elementos filhos.</p>
+<div class="codebox">
+  <xmp><div class="wrapper">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+ </div>
+     </xmp>
+</div>
+<p>Façamos de .wrapper um grid container</p>
+<div class="codebox">
+  <xmp>.wrapper {
+    display: grid;
+  }
+     </xmp>
+</div>
+<h2>Grid Tracks</h2>
+<p>Nós definimos linhas e colunas no nosso grid com as propriedades grid-template-columns e grid-template-rows. Isso define o grid tracks. Um grid track é o espaço entre duas linhas em um grid. Na imagem abaixo você pode ver um track highlighter – o track na primeira linha do nosso grid.</p>
+<p>Posso adicionar ao exemplo anterior a propriedade grid-template-columns, depois definir o tamanho da column tracks.</p>
+<p>Agora criei um grid com três colunas fixas de 200px. Os itens filhos serão dispostos nessa grade, um em cada célula da grade.</p>
+<div class="codebox">
+  <xmp><div class="wrapper">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+ </div>
+     </xmp>
+</div>
+<div class="codebox">
+  <xmp>.wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+     </xmp>
+</div>
+<h1 id="media">Usando Media Queries</h1>
+<p>Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas no CSS3, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.</p>
+<h2>Sintaxe</h2>
+<p>Media queries consistem de um media type e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em media features, que determinam ou verdadeiro ou falso. Os resultados da query são verdadeiros se o media type especificado na media query corresponde ao tipo do documento exibido no dispositivo e todas as expressões na media query são verdadeiras.</p>
+<div class="codebox">
+  <xmp><!-- CSS media query em um elemento de link -->
+
+    <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+     </xmp>
+</div>
+<div class="codebox">
+  <xmp><!-- CSS media query dentro de um stylesheet -->
+
+    @media (max-width: 600px)
+    {
+      .facet_sidebar
+       {
+        display: none;
+       }
+    }
+     </xmp>
+</div>
+<p>Quando uma media query é verdadeira, a camada de estilo ou as regras de estilos correspondentes são aplicadas, seguindo o padrão de regras de cascatas. Camadas de estilos com media queries ligadas a tag link vão fazer download mesmo se suas medias queries retornarem falso (eles não se aplicam, no entanto).</p>
+<p>A menos que você use os operadores not ou only, o media type é opcional e o tipo all será implícito.</p>
+<h2>Operadores lógicos</h2>
+<p>Você pode compor media queries complexos usando operadores lógicos, incluindo not, and, e only. O operador and é usado para combinar múltiplas media features em uma mesma media query, requerendo que cada sequência de características, retorne verdadeiro na ordem para que a query seja verdadeiro. O operador not é usado para negar uma media query inteira. O operador only é usado para aplicar um estilo apenas se a query inteira for igual, útil para previnir que navegadores antigos apliquem os estilos selecionados. Se você usar os operadores not ou only, você tem que especificar um tipo de media explícito.
+</p>
+<p>
+  Você também pode combinar múltiplas medias queries em uma lista separadas por vírgulas, se qualquer uma das media queries na lista é verdadeira, toda a instrução retorna verdadeira. Isto é equivalente a um operador or.</p>
+  <h2>and</h2>
+  <p>A palavra-chave and é usada para combinar múltiplas media features, bem como combinar media features com media types. Uma media query básica, uma media feature simples com a media type all, pode parecer com isso:</p>
+  <div class="codebox">
+    <xmp>@media (min-width: 700px) { ... }
+       </xmp>
+  </div>
+  <p>Se, no entanto, você desejar que isso se aplique apenas para telas em landscape, você pode usar o operador and para deixar todas as media features juntas.</p>
+  <div class="codebox">
+    <xmp>@media (min-width: 700px) and (orientation: landscape) { ... }
+       </xmp>
+  </div>
+  <p>Agora, a media query acima vai apenas retorna verdadeira se o viewport for 700px, wide ou wider e a tela estiver em landscape. Se, no entanto, você deseja apenas que isso seja aplicado se a tela em questão for media type TV, você pode encadear essas features com a media type usando o operador and.</p>
+  <div class="codebox">
+    <xmp>@media tv and (min-width: 700px) and (orientation: landscape) { ... }
+       </xmp>
+  </div>
+  <p>Agora, a media query acima vai ser aplicada apenas se a media type for TV, o viewport for 700px wide ou wider, e a tela estiver em paisagem.</p>
+  <p>
+
+  </p>
+  <p>
+
+  </p>
     </main>
     <script src="./csspage.js">
     </script>

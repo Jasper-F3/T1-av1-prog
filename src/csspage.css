@@ -10,7 +10,7 @@
 
 body {
   color: black;
-  background-color: rgb(217, 223, 230);
+  background-color: rgb(243, 240, 240);
   margin: 0;
   padding: 0;
 }
@@ -111,11 +111,13 @@ xmp {
 .navcontent {
   text-decoration: none;
   color: var(--text-primary);
-  gap: 15px;
   transition: all 0.5s;
 }
 
 .navitems {
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+  justify-content: center;
   background-color: var(--bg-secondary);
   padding: 10px;
   transition: 0.5s;
@@ -124,11 +126,10 @@ xmp {
 .navcontent a {
   text-decoration: none;
   color: var(--text-secondary);
-  display: flex;
-  flex-direction: column-reverse;
 }
 
 .catnavbar {
+  display: none;
 }
 
 .catnavbar.active {
@@ -209,6 +210,7 @@ a:active {
 .logo svg {
   transform: rotate(0deg);
   transition: var(--transition-speed);
+  padding: 9px;
 }
 
 .logo-text {
@@ -244,6 +246,15 @@ a:active {
 
   main {
     margin: 0;
+  }
+  .navcontent {
+    display: flex;
+    top: -300px;
+    left: 0;
+    position: absolute;
+    padding-left: 10px;
+    flex-direction: column;
+    border: 0;
   }
 }
 
